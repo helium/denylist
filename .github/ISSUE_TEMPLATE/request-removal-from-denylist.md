@@ -1,7 +1,7 @@
 ---
 name: Request Removal from Denylist
 about: Fill out this form to request a Hotspot removal from the denylist
-title: "[REMOVAL REQUEST]"
+title: "[Removal]: "
 labels: ''
 assignees: ''
 
