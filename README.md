@@ -38,5 +38,29 @@ We will publish these lists in two forms as releases in this repository:
 * A binary xor filter that can be loaded via configuration to activate the above
   feature.
 
+Instructions to convert the plaintext file to the binary format accepted by the
+miner is documented below.
+
+## Adding to the List
+
+We welcome contributions to add to the denylist but may do independent
+verification to determine whether or not we feel comfortable adding individual
+Hotspots to this list. The process for contributions are to be defined at a
+later date.
+
+## Removal from this List
+
+```
+TODO: Describe the Issue Process for asking for removal 
+
+Points to address
+* Open a PR
+* There is a template
+* How often can you request
+* What happens if you're aggressive on requesting?
+* What are the obligations for removal?
+
+```
+
 [vote]: https://heliumvote.com/14iwaexUYUe5taFgb5hx2BZw74z3TSyonRLYyZU1RbddV4bJest
 [HIP-40]: https://github.com/helium/HIP/blob/master/0040-validator-denylist.md
