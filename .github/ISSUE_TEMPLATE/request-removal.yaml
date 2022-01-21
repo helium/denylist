@@ -1,0 +1,108 @@
+
+name: Request Removal from Denylist
+about: Fill out this form to request a Hotspot removal from the denylist
+title: "[Removal]: "
+labels: ["removal", "triage"]
+assignees: ''
+body:
+  - type: markdown
+    attributes:
+      value: |
+        To request the removal of a Hotspot from the denylist, please fill out the requested information.
+        One Hotspot per Request only.
+        Incomplete requests will not be considered and can be closed without comment.
+
+  - type: input
+    id: hotspot-name
+    attributes:
+      label: Hotspot Name
+      description: What is the animal name of your Hotspot?
+      placeholder: ex. tiny-bronze-caterpillar
+    validations:
+      required: true
+
+  - type: input
+    id: hotspot-address
+    attributes:
+      label: Hotspot b58 Address
+      description: What is the address of your Hotspot?
+      placeholder: ex. 112ui8pK1pmkeTiNxLNqJiwjUkSobo6gf6PnB15Tw7iA4orN9B2j
+    validations:
+      required: true
+
+  - type: input
+    id: discord-handle
+    attributes:
+      label: Discord Handle
+      description: What is your Discord handle (in case we need to reach you?)
+      placeholder: ex. hotspot-owner#9184
+    validations:
+      required: false
+
+  - type: input
+    id: hotspot-manufacturer
+    attributes:
+      label: Hotspot Manufacturer
+      description: What is the manufacturer of your Hotspot?
+      placeholder: ex. Nebra, Bobcat, RAK
+    validations:
+      required: true
+
+  - type: input
+    id: reason
+    attributes:
+      label: Removal Reason
+      description: Why should this Hotspot be removed from the denylist?
+      placeholder: ex. I used to do things that were not for creating coverage but I stopped. Please save me.
+    validations:
+      required: true
+
+  - type: textarea
+    id: modifications
+    attributes:
+      label: Modifications
+      description: Have you modified your Hotspot in anyway? If yes, please describe the modifications.
+      placeholder: ex. I used to do things that were not for creating coverage but I stopped. Please save me.
+    validations:
+      required: false
+
+  - type: dropdown
+    id: modifications
+    attributes:
+      label: Modifications
+      description: Have you modified your Hotspot in anyway? If yes, please describe in the additional information box below.
+      options:
+        - Yes
+        - No
+    validations:
+      required: true
+
+  - type: dropdown
+    id: extra-forwarder
+    attributes:
+      label: Extra forwarders
+      description: Are you using one or more extra forwarder(s)? If yes, please describe why in the additional information box below.
+      options:
+        - Yes
+        - No
+    validations:
+      required: true
+
+  - type: dropdown
+    id: extra-antennas
+    attributes:
+      label: Extra antennas
+      description: Do you have multiple antennas attached to one Hotspot? If yes, please describe why in the additional information box below.
+      options:
+        - Yes
+        - No
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Additional Information
+      description: Include photo(s) of your Hotspot, describe your setup, and include any additional information
+    validations:
+      required: false
