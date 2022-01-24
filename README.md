@@ -2,9 +2,12 @@
 
 [vote]: https://heliumvote.com/14iwaexUYUe5taFgb5hx2BZw74z3TSyonRLYyZU1RbddV4bJest
 [hip-40]: https://github.com/helium/HIP/blob/master/0040-validator-denylist.md
+[issue]: https://github.com/helium/denylist/issues
 
 - [Introduction](#introduction)
-- [Instructions](#instructions)
+  - [Additions to this List](#additions-to-this-list)
+  - [Removal from this List](#removal-from-this-list)
+- [Instructions for Signers](#instructions-for-signers)
   - [Updating the Denylist](#updating-the-denylist)
   - [Providing a Signature](#providing-a-signature)
   - [Adding / Removing Keys](#adding--removing-keys)
@@ -48,8 +51,21 @@ We will publish these lists in two forms as releases in this repository:
 - A plaintext file that includes every Hotspot’s public key in base68 format.
 - A binary xor filter that can be loaded via configuration to activate the above
   feature.
+  
+## Additions to this List
 
-# Instructions
+We welcome contributions to add to the denylist but may do independent
+verification to determine whether or not we feel comfortable adding individual
+Hotspots to this list. At this time, you may [open an issue][issue] to request
+addition of one or many Hotspots.
+
+## Removal from this List
+
+At this time, you may [open an issue][issue] to request removal of a Hotspot
+from this denylist. You must use the provided template and requests may be
+closed without explanation. 
+
+# Instructions for Signers
 
 To use this repository to generate filters, you will need to use the
 [xorf-generator](https://github.com/helium/xorf-generator) binary that is
