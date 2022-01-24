@@ -6,6 +6,7 @@ labels: ["removal", "triage"]
 assignees: []
 body:
   - type: markdown
+    id: introduction
     attributes:
       value: |
         To request the removal of a Hotspot from the denylist, please fill out the requested information.
