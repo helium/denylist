@@ -1,20 +1,31 @@
-# Helium, Inc - Denylist
+# Helium, Inc - Denylist <!-- omit in toc -->
+
+[vote]: https://heliumvote.com/14iwaexUYUe5taFgb5hx2BZw74z3TSyonRLYyZU1RbddV4bJest
+[hip-40]: https://github.com/helium/HIP/blob/master/0040-validator-denylist.md
+
+- [Introduction](#introduction)
+- [Instructions](#instructions)
+  - [Updating the Denylist](#updating-the-denylist)
+  - [Providing a Signature](#providing-a-signature)
+  - [Adding / Removing Keys](#adding--removing-keys)
+
+# Introduction
 
 The Helium community requested Helium, Inc. to maintain a temporary Hotspot
-Denylist [through an on-chain vote][vote] around block 1,180,295 (approximately
+Denylist [through an on-chain vote][vote] around block `1,180,295` (approximately
 2022-01-14 04:57 UTC).
 
 The Helium compiled firmware of Original Helium Hotspots (and RAK Hotspots) will
 use this list in the following manner. Hotspots performing the Challenger role
 for the Proof-of-Coverage system:
 
-* will not generate challenges for Hotspots in the denylist.
-* will drop witness receipts for Hotspots in the denylist.
+- will not generate challenges for Hotspots in the denylist.
+- will drop witness receipts for Hotspots in the denylist.
 
 We won’t be able to mark individual witness receipts as invalid due to presence
 in denylist as it would break consensus rules. A more complex implementation
 that includes this could be implemented in the coming weeks as a part of a
-[HIP-40][HIP-40] implementation.
+[HIP-40][hip-40] implementation.
 
 Other manufacturers will have the option of loading this denylist or other lists
 if they choose to do so and using that feature, their Hotspots will also take
@@ -34,89 +45,107 @@ Hotspot process if a Hotspot being transferred is on the suspected list.
 
 We will publish these lists in two forms as releases in this repository:
 
-* A plaintext file that includes every Hotspot’s public key in base68 format.
-* A binary xor filter that can be loaded via configuration to activate the above
+- A plaintext file that includes every Hotspot’s public key in base68 format.
+- A binary xor filter that can be loaded via configuration to activate the above
   feature.
 
-## Instructions
-
-### Maintainers
+# Instructions
 
 To use this repository to generate filters, you will need to use the
 [xorf-generator](https://github.com/helium/xorf-generator) binary that is
 responsible for generating a signed version of a binary xor filter.
 
-#### Updating the denylist
+If you are a multisig member you will _also_ need a
+[helium-wallet](https://github.com/helium/helium-wallet-rs) release to sign the
+filter data.
+
+## Updating the Denylist
 
 1. Open a PR with a modified `denylist.csv` file to add or remove Hotspots.
-   Ensure the file is lexicographically sorted after modifications.
+
 2. Generate a manifest file. Ensure that you are incrementing the serial number.
 
-    ```
-    $ xorf-generator manifest generate --input denylist.csv --serial 2022012401 --manifest manifest.json
-    ```
+   ```shell
+   $ xorf-generator manifest generate --input denylist.csv --serial 2022012401
+   ```
 
-3. Generate an unsigned filter and check it into the PR.
+3. Check in the generated `manifest.json` and push up to the PR
 
-    ```
-    $ xorf-generator filter generate --input denylist.csv --key public_keys.json --serial 2022012401 --manifest manifest.json --output unsigned.bin
-    ```
+4. Reqeust signatures from multisig members in the PR
 
-4. Request signatures from multisig members in the PR using the hash that is
-   generated in the `manifest.json` file. Details below.
-5. Once sufficient signatures have been provided, update the `manifest.json`
-   file to include them in the `signatures` array.
-4. Automation should now be able to generate a filter file using this command
+5. Once enough signatures gave been provided, verify the manifest using:
 
-    ```
-    $ xorf-generator filter generate --input denylist.csv --key public_keys.json --manifest manifest.json --output filter.bin
-    ```
+   ```shell
+   $ xorf-generator manifest verify --input denylist.csv
+   ```
 
-5. If run locally, you can also verify the generated filter.
+   If all signatures verify approve the PR and merge it
 
-    ```
-    $ xorf-generator filter verify --input filter.bin --key public_keys.json
-    ```
+6. The automatic CI will generate the final filter.bin from master using:
 
-6. One can also check if a Hotspot is included in a filter.
+   ```
+   $ xorf-generator filter generate --input denylist.csv
+   ```
 
-    ```
-    $ xorf-generator filter contains -i filter.bin 112CgbghEZwMwbKUXfz9i9o4Ysxtio4ucGH24zFNYRRU6V2RtJyk
-    ```
+   which will generate a filter.bin and create a github release for that filter.bin
+   witht the given serial number.
 
-#### Providing a signature
+   **NOTE** This step is automated and just provided for clarity
 
-1. You've probably created a key before this process and have it added to the
-   `public_keys.json` file.
+## Providing a Signature
+
+1.  You've probably created a key before this process and have it added to the
+    `public_key.json` file.
 
     ```
     $ helium-wallet create basic -o signing.key
     ```
 
-2. A Pull Request is opened by another signer in the multisig.
-3. Verify the additions to the list of Hotspots using your methodology.
-4. Sign the unsigned file provided in the Pull Request.
+2.  A Pull Request is opened by another signer in the multisig.
+
+3.  Verify the additions to the list of Hotspots using your methodology.
+
+4.  Create the signing data using:
+
+    ```shell
+    $ xorf-generator manifest verify --input denylist.csv
+    ```
+
+    which will generate a `data.bin` to sign
+
+5.  Sign the data file:
 
     ```
-    $ helium-wallet -f signing.key sign file unsigned.bin
+    $ helium-wallet -f signing.key sign file data.bin
     ```
 
-4. Provide signature to the Pull Request.
+6.  Add the resulting signature json to the `signature` array in the
+    manifest.json of the PR.
 
-#### Adding / Removing Keys
+    **NOTE** that this is a JSON file and that the `signatures` field is a a
+    comma separated list of address, signature pairs.
 
-1. Modify the `public_keys.json` file by adding or removing keys. Don't forget
+7.  You can verify the manifest using:
+
+    ```shell
+    $ xorf-generator manifest verify --input denylist.csv
+    ```
+
+    which will output all the signatures and whether they are valid or not.
+
+8.  Submit the updated manifest.json to the same PR
+
+## Adding / Removing Keys
+
+1. Modify the `public_key.json` file by adding or removing keys. Don't forget
    to adjust the required keys value if necessary.
 2. Generate the new multisig address.
 
-    ```
-    $ xorf-generator key info public_keys.json
-    ```
+   ```
+   $ xorf-generator key info public_key.json
+   ```
 
 3. Update `miner` to use this multisig address.
 
 **Note: A miner will not be able to verify releases with a new multisig until
 they have the new multisig address in their configuration.**
-
-[vote]: https://heliumvote.com/14iwaexUYUe5taFgb5hx2BZw74z3TSyonRLYyZU1RbddV4bJest
-[HIP-40]: https://github.com/helium/HIP/blob/master/0040-validator-denylist.md
