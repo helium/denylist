@@ -1,0 +1,39 @@
+
+name: Request Addition to Denylist
+about: Fill out this form to request one or many Hotspot(s) to be added to the denylist
+title: "[Addition]: "
+labels: ["addition", "triage"]
+assignees: ''
+body:
+  - type: markdown
+    attributes:
+      value: |
+        To request the addition of one or many Hotspot(s) to the denylist, please fill out the requested information.
+        Hotspot lists will be reviewed and verified but submitting Hotspots here will not guarantee addition to denylist. Requests may be closed without comment.
+
+  - type: textarea
+    id: hotspot-addresses
+    attributes:
+      label: Hotspot b58 Addresses
+      description: Please provide a list of Hotspot addresses separated by newlines. One Hotspot address per line.
+      placeholder: ex. 112ui8pK1pmkeTiNxLNqJiwjUkSobo6gf6PnB15Tw7iA4orN9B2j
+    validations:
+      required: true
+
+  - type: input
+    id: discord-handle
+    attributes:
+      label: Discord Handle
+      description: What is your Discord handle (in case we need to reach you?)
+      placeholder: ex. hotspot-owner#9184
+    validations:
+      required: false
+
+  - type: textarea
+    id: reasons
+    attributes:
+      label: Reason(s)
+      description: Why should these Hotspot(s) be added to the denylist? Please add specific reasoning.
+      placeholder: ex. I found some these Hotspots in a closet.
+    validations:
+      required: true
