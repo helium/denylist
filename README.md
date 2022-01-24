@@ -39,7 +39,7 @@ these new lists as that would potentially allow suspicious Hotspot deployers to
 identify the analysis approaches that we utilize. These lists will be published
 as frequently as we determine is necessary. They will be signed by Helium, Inc.
 as a part of a multisig with members consisting of community contributors and
-other researchers who suppor the work to generate this list.
+other researchers who support the work to generate this list.
 
 Since these lists are going to be public, other tools like Explorer and
 Hotspotty may use them to visualize suspicious activity. In the coming weeks we
