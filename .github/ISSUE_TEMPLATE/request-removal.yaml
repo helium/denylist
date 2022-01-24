@@ -63,8 +63,8 @@ body:
       label: Modifications
       description: Have you modified your Hotspot in anyway? If yes, please describe in the additional information box below.
       options:
-        - 'yes'
-        - 'no'
+        - 'Yes'
+        - 'No'
     validations:
       required: true
 
@@ -74,8 +74,8 @@ body:
       label: Extra forwarders
       description: Are you using one or more extra forwarder(s)? If yes, please describe why in the additional information box below.
       options:
-        - 'yes'
-        - 'no'
+        - 'Yes'
+        - 'No'
     validations:
       required: true
 
@@ -85,8 +85,8 @@ body:
       label: Extra antennas
       description: Do you have multiple antennas attached to one Hotspot? If yes, please describe why in the additional information box below.
       options:
-        - 'yes'
-        - 'no'
+        - 'Yes'
+        - 'No'
     validations:
       required: true
 
