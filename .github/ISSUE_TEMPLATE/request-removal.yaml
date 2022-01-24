@@ -6,7 +6,6 @@ labels: ["removal", "triage"]
 assignees: []
 body:
   - type: markdown
-    id: introduction
     attributes:
       value: |
         To request the removal of a Hotspot from the denylist, please fill out the requested information.
@@ -58,23 +57,14 @@ body:
     validations:
       required: true
 
-  - type: textarea
-    id: modifications
-    attributes:
-      label: Modifications
-      description: Have you modified your Hotspot in anyway? If yes, please describe the modifications.
-      placeholder: ex. I used to do things that were not for creating coverage but I stopped. Please save me.
-    validations:
-      required: false
-
   - type: dropdown
     id: modifications
     attributes:
       label: Modifications
       description: Have you modified your Hotspot in anyway? If yes, please describe in the additional information box below.
       options:
-        - Yes
-        - No
+        - 'yes'
+        - 'no'
     validations:
       required: true
 
