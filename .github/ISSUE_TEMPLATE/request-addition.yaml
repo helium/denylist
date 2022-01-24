@@ -1,9 +1,9 @@
 
 name: Request Addition to Denylist
-about: Fill out this form to request one or many Hotspot(s) to be added to the denylist
+description: Fill out this form to request one or many Hotspot(s) to be added to the denylist
 title: "[Addition]: "
 labels: ["addition", "triage"]
-assignees: ''
+assignees: []
 body:
   - type: markdown
     attributes:
