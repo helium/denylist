@@ -69,7 +69,7 @@ responsible for generating a signed version of a binary xor filter.
 4. Automation should now be able to generate a filter file using this command
 
     ```
-    $ xorf-generator filter generate --input denylist.csv --key public_keys.json --serial 2022012401 --manifest manifest.json --output filter.bin
+    $ xorf-generator filter generate --input denylist.csv --key public_keys.json --manifest manifest.json --output filter.bin
     ```
 
 5. If run locally, you can also verify the generated filter.
