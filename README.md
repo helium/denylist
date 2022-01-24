@@ -44,7 +44,7 @@ We will publish these lists in two forms as releases in this repository:
 
 To use this repository to generate filters, you will need to use the
 [xorf-generator](https://github.com/helium/xorf-generator) binary that is
-responsible for generating a signed version of the binary.
+responsible for generating a signed version of a binary xor filter.
 
 #### Updating the denylist
 
