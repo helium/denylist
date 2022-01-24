@@ -71,7 +71,7 @@ filter data.
 
 3. Check in the generated `manifest.json` and push up to the PR
 
-4. Reqeust signatures from multisig members in the PR
+4. Request signatures from multisig members in the PR
 
 5. Once enough signatures gave been provided, verify the manifest using:
 
@@ -88,7 +88,7 @@ filter data.
    ```
 
    which will generate a filter.bin and create a github release for that filter.bin
-   witht the given serial number.
+   with the given serial number.
 
    **NOTE** This step is automated and just provided for clarity
 
