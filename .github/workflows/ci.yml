@@ -1,0 +1,27 @@
+on:
+  pull_request:
+    branches: [main]
+
+name: ci
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Install xorf-generator
+        uses: jaxxstorm/action-install-gh-release@v1.3.1
+        env:
+          ## Allow install into PATH
+          ACTIONS_ALLOW_UNSECURE_COMMANDS: true
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          repo: helium/xorf-generator
+
+      - name: Check manifest
+        run: xorf-generator manifest verify -i denylist.csv
+
+      - name: Check filter
+        run: xorf-generator filter generate -i denylist.csv
