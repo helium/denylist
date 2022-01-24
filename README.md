@@ -7,7 +7,7 @@
 - [Introduction](#introduction)
   - [Additions to this List](#additions-to-this-list)
   - [Removal from this List](#removal-from-this-list)
-- [Instructions for Maintainers](#instructions-for-maintainers)
+- [Instructions for Signers](#instructions-for-signers)
   - [Updating the Denylist](#updating-the-denylist)
   - [Providing a Signature](#providing-a-signature)
   - [Adding / Removing Keys](#adding--removing-keys)
@@ -65,7 +65,7 @@ At this time, you may [open an issue][issue] to request removal of a Hotspot
 from this denylist. You must use the provided template and requests may be
 closed without explanation. 
 
-# Instructions for Maintainers
+# Instructions for Signers
 
 To use this repository to generate filters, you will need to use the
 [xorf-generator](https://github.com/helium/xorf-generator) binary that is
