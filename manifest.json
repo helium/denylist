@@ -1,5 +1,10 @@
 {
   "serial": 2022012402,
   "hash": "zXGd2C6upMnekFoubaPZxqWNTyxzruClR6t3T8Doihs=",
-  "signatures": []
+  "signatures": [
+    {
+      "address": "147DRzZFQDrsgt4VG5JCugqZtjPMVgtuzwgSLxkSpoGxSm34WKH",
+      "signature": ""
+    }
+  ]
 }
