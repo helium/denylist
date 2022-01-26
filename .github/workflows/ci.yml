@@ -38,8 +38,5 @@ jobs:
         with:
           files: |
             filter.bin
-            denylist.csv
-            manifest.json
-            public_key.json
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
