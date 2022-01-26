@@ -25,3 +25,12 @@ jobs:
 
       - name: Check filter
         run: xorf-generator filter generate -i denylist.csv
+
+      - name: Push Release
+        uses: softprops/action-gh-release@v1
+        if: startsWith(github.ref, 'refs/tags/')
+        with:
+          files: |
+            filter.bin
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
