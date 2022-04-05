@@ -1,4 +1,4 @@
-# Helium, Inc - Denylist <!-- omit in toc -->
+# Nova Labs - Denylist <!-- omit in toc -->
 
 [vote]: https://heliumvote.com/14iwaexUYUe5taFgb5hx2BZw74z3TSyonRLYyZU1RbddV4bJest
 [hip-40]: https://github.com/helium/HIP/blob/master/0040-validator-denylist.md
@@ -14,7 +14,7 @@
 
 # Introduction
 
-The Helium community requested Helium, Inc. to maintain a temporary Hotspot
+The Helium community requested Nova Labs (formerly Helium, Inc.) to maintain a temporary Hotspot
 Denylist [through an on-chain vote][vote] around block `1,180,295` (approximately
 2022-01-14 04:57 UTC).
 
