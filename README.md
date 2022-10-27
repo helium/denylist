@@ -54,16 +54,19 @@ We will publish these lists in two forms as releases in this repository:
   
 ## Additions to this List
 
-We welcome contributions to add to the denylist but may do independent
-verification to determine whether or not we feel comfortable adding individual
-Hotspots to this list. At this time, you may [open an issue][issue] to request
-addition of one or many Hotspots.
+Requesting additions to this list has changed as of 10/27/22. At this time, please visit 
+Crowdspot.io to request any additions to the Denylist.
+
+We welcome contributions to add to the Denylist but may do independent verification to 
+determine whether or not we feel comfortable adding individual Hotspots to this list.
 
 ## Removal from this List
 
-At this time, you may [open an issue][issue] to request removal of a Hotspot
-from this denylist. You must use the provided template and requests may be
-closed without explanation. 
+Requesting removals to this list has changed as of 10/27/22. At this time, please visit 
+Crowdspot.io to request any removals to the Denylist.
+
+We welcome contributions to the Denylist but may do independent verification to 
+determine whether or not we feel comfortable removing individual Hotspots to this list. 
 
 # Instructions for Signers
 
