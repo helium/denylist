@@ -1,6 +1,6 @@
 {
-  "serial": 2023063001,
-  "hash": "QEM/wk7iyMBJ+JcRQ047CDJt/1z73wv5sGTUKB3QMZ8=",
+  "serial": 2023071401,
+  "hash": "MFx3ttFtvPEAZjMeqcQ0WgFVy5vtsOKEJkCYMMo3oNA=",
   "signatures": [
     {
       "address": "13YqCei6dP2ibq2DAy81NmU8FYwwzo5HLKXFA3yM3Rvq9WxDfKF",
@@ -8,15 +8,15 @@
     },
     {
       "address": "14egjs9cSxt4jnaZTYQE4NemQVXL6qtayqNNpy3VJPSS6AAcaUq",
-      "signature": "6mOaPpGVXo48wjI/VJ2DH6fQdq+IzSLpNpxCzXAbph1JnSlvKdXyEmzrZc4W65cjuAir3otZvQeDZCZIVs4AAw=="
+      "signature": ""
     },
     {
       "address": "13RKFFy5qmibyaS6N3Uw18UBDwGhhsXpk6jDn7SMenfDrQ6o6eh",
-      "signature": "hy1FHlY5/tjsO6P4ZNJV7fdjEZsp8wpSleFQU6OS/USkqslayVMWHu4UVcLz2/YEbI+dZfClX7t1xsx0cf7MDA=="
+      "signature": ""
     },
     {
       "address": "13t59Q3oihn5YnhmW4bJARbxrK9TWaXgn2SUXZYpZYBScjKycYZ",
-      "signature": "bFMaFD5g89Ofqa31z+OQjrAhgnqNL8/xczsRB8vZ7R2uR2ot/ukiR8U3n98cCEa3Sxpp+Oe2cXmKhgFf7we9BQ=="
+      "signature": ""
     },
     {
       "address": "14M61qg7QF7FMN8vZw8ne66ZAf17aGaw6hyednoaFQfHwM6kmX7",
