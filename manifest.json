@@ -1,5 +1,9 @@
 {
-  "serial": 2023081401,
-  "hash": "jffUjwtcs2dpHaLjED4wV693XAbsLLDM+m02TB1lL/4=",
-  "signatures": []
+    "serial": 2023081401,
+    "hash": "jffUjwtcs2dpHaLjED4wV693XAbsLLDM+m02TB1lL/4=",
+    "signatures": [{
+        "address": "13hSNQ6KDnFcG8zKJg79HFcKNPcqg4f4hSnxaSjpUsyh7UAvRak",
+        "signature": "XdyRcHfudoTMImy5CY7V1l4tiQYbNHhwYQSQANuxM2qnGNnIiwEI3q7ApkR1pk4VqeXU6xDOC7e2k53OfqbMDA=="
+    }
+    ]
 }
