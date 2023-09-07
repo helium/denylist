@@ -1,9 +1,8 @@
 {
-  "serial": 2023090101,
-  "report_prefix": "https://shdw-drive.genesysgo.net/AXgEm5r6wUq7guaZYheZBrnQjfDhXY9A2df9vnfv9EoF/",
-  "hash": "xizSWSBlEx3YjgYslimRduD03MEbL99P12y5cy54w90=",
+  "serial": 2023090701,
+  "hash": "JznAut3VoxGFqB1qwrW0s2VyJsuAEyIw2wv+9H+fRE4=",
   "signatures": [{
   "address": "13hSNQ6KDnFcG8zKJg79HFcKNPcqg4f4hSnxaSjpUsyh7UAvRak",
-  "signature": "J5WdbZ1UENtXvHt8J6+yWqMdkJfLqTHNE6ioP+QrUqEabK0uAK3QzpVzPHFly+hWx+bSJ2h+RmwZFXzkRB/HCQ=="
+  "signature": "XGI1yP3nnBHJA7MCJWgf/QZhXPhcOSNpkBprJR7txxtnirhmeOYNRQmeBBsaOQSFmODqqHVP7PCCQ+EFfLyJAw=="
 }]
 }
