@@ -32,7 +32,7 @@ jobs:
           echo "::set-output name=descriptor_path::$(jq .report_prefix manifest.json)"
 
       - name: Download descriptor
-        run: wget ${{steps.set_descriptor.outputs.descriptor_path}}/descriptor.json
+        run: wget ${{steps.set_descriptor.outputs.descriptor_path}}descriptor.json
 
       - name: Check manifest
         run: xorf-generator manifest verify
