@@ -26,11 +26,14 @@ jobs:
         with:
           repo: helium/xorf-generator
 
+      - name: Download descriptor
+        run: wget $(grep report_prefix manifest.json | sed -e 's/\"report_prefix\": //' -e 's/"//g' -e 's/,$//')/descriptor.json
+
       - name: Check manifest
-        run: xorf-generator manifest verify -i denylist.csv
+        run: xorf-generator manifest verify
 
       - name: Check filter
-        run: xorf-generator filter generate -i denylist.csv
+        run: xorf-generator filter generate
 
       - name: Push Release
         uses: softprops/action-gh-release@v1
