@@ -3,7 +3,7 @@ on:
     branches:
       - main
     tags:
-      - '[0-9]+'
+      - "[0-9]+"
   pull_request:
     branches:
       - main
@@ -33,6 +33,9 @@ jobs:
 
       - name: Download descriptor
         run: wget ${{steps.set_descriptor.outputs.descriptor_path}}descriptor.json
+
+      - name: Generate signing data
+        run: xorf-generator data generate
 
       - name: Check manifest
         run: xorf-generator manifest verify
