@@ -31,11 +31,16 @@ jobs:
         run: |
           echo "::set-output name=descriptor_path::$(jq .report_prefix manifest.json)"
 
+      - name: Get serial
+        id: set_serial
+        run: |
+          echo "::set-output name=serial::$(jq .serial manifest.json)"
+
       - name: Download descriptor
         run: wget ${{steps.set_descriptor.outputs.descriptor_path}}descriptor.json
 
       - name: Generate signing data
-        run: xorf-generator data generate
+        run: xorf-generator data generate --serial ${{steps.set_serial.outputs.serial}}
 
       - name: Check manifest
         run: xorf-generator manifest verify
