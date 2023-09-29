@@ -3,7 +3,7 @@ on:
     branches:
       - main
     tags:
-      - '[0-9]+'
+      - "[0-9]+"
   pull_request:
     branches:
       - main
@@ -26,11 +26,27 @@ jobs:
         with:
           repo: helium/xorf-generator
 
+      - name: Get descriptor path
+        id: set_descriptor
+        run: |
+          echo "::set-output name=descriptor_path::$(jq .report_prefix manifest.json)"
+
+      - name: Get serial
+        id: set_serial
+        run: |
+          echo "::set-output name=serial::$(jq .serial manifest.json)"
+
+      - name: Download descriptor
+        run: wget ${{steps.set_descriptor.outputs.descriptor_path}}descriptor.json
+
+      - name: Generate signing data
+        run: xorf-generator data generate --serial ${{steps.set_serial.outputs.serial}}
+
       - name: Check manifest
-        run: xorf-generator manifest verify -i denylist.csv
+        run: xorf-generator manifest verify
 
       - name: Check filter
-        run: xorf-generator filter generate -i denylist.csv
+        run: xorf-generator filter generate
 
       - name: Push Release
         uses: softprops/action-gh-release@v1
