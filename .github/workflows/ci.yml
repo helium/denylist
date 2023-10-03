@@ -18,7 +18,7 @@ jobs:
       - uses: actions/checkout@v2
 
       - name: Install xorf-generator
-        uses: jaxxstorm/action-install-gh-release@v1.3.1
+        uses: jaxxstorm/action-install-gh-release@v1.10.0
         env:
           ## Allow install into PATH
           ACTIONS_ALLOW_UNSECURE_COMMANDS: true
