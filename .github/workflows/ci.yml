@@ -37,10 +37,10 @@ jobs:
           echo "serial=$(jq .serial manifest.json)" >> $GITHUB_ENV
 
       - name: Download descriptor
-        run: wget ${{steps.set_descriptor.outputs.descriptor_path}}descriptor.bin
+        run: wget ${{env.descriptor_path}}descriptor.bin
 
       - name: Generate signing data
-        run: xorf-generator data generate --serial ${{steps.set_serial.outputs.serial}}
+        run: xorf-generator data generate --serial ${{env.serial}}
 
       - name: Check manifest
         run: xorf-generator manifest verify
