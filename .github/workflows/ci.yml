@@ -15,10 +15,10 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v4
 
       - name: Install xorf-generator
-        uses: jaxxstorm/action-install-gh-release@v1.3.1
+        uses: jaxxstorm/action-install-gh-release@v1.10.0
         env:
           ## Allow install into PATH
           ACTIONS_ALLOW_UNSECURE_COMMANDS: true
@@ -29,18 +29,18 @@ jobs:
       - name: Get descriptor path
         id: set_descriptor
         run: |
-          echo "::set-output name=descriptor_path::$(jq .report_prefix manifest.json)"
+          echo "descriptor_path=$(jq .report_prefix manifest.json)"  >> $GITHUB_ENV
 
       - name: Get serial
         id: set_serial
         run: |
-          echo "::set-output name=serial::$(jq .serial manifest.json)"
+          echo "serial=$(jq .serial manifest.json)" >> $GITHUB_ENV
 
       - name: Download descriptor
-        run: wget ${{steps.set_descriptor.outputs.descriptor_path}}descriptor.json
+        run: wget ${{env.descriptor_path}}descriptor.bin
 
       - name: Generate signing data
-        run: xorf-generator data generate --serial ${{steps.set_serial.outputs.serial}}
+        run: xorf-generator data generate --serial ${{env.serial}}
 
       - name: Check manifest
         run: xorf-generator manifest verify
