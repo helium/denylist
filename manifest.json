@@ -1,11 +1,10 @@
 {
-  "serial": 2024040901,
-  "hash": "Cg6OQI1+tCJkAKX47RqnKdLTmpoxa9ESJGkbi/GeYiw=",
-  "report_prefix": "https://shdw-drive.genesysgo.net/DnxbxUgmfYxEkup3PdWibUX2xhA9dkwmznjaPKNweGwx/",
+  "serial": 2024041501,
+  "hash": "pXwYL5oCRl+LeQGAEJxYKzW6p5mtrDkdsKKOK8cKMiQ=",
   "signatures": [
     {
       "address": "13hSNQ6KDnFcG8zKJg79HFcKNPcqg4f4hSnxaSjpUsyh7UAvRak",
-      "signature": "uItWxJTftRgdK0P9dasP3xPEzzIlhAa+3DoZU69nLj0WUI+idhTu+vcFlVuuk9ljc4CtzRIyNdEnBlKceQ9XAA=="
+      "signature": ""
     }
   ]
 }
