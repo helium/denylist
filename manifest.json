@@ -1,11 +1,11 @@
 {
-  "serial": 2024060301,
-  "hash": "0+JyBbLhZ0ubbcZ5gu4apfMfZuQWD2w5jdYnYwlzUBQ=",
-  "report_prefix": "https://shdw-drive.genesysgo.net/5xpVB1SbeCeHEUS2A9vesgxv4DuYGs75DCbEVjSd7MFU/",
+  "serial": 2024061001,
+  "hash": "bOi4fLSvBuiuXmKBnJ40/gEzGt37FywELpEpuIVeQmI=",
+  "report_prefix": "https://shdw-drive.genesysgo.net/CHrJQf6PZo7jsf7A4TyDDPv5Q6iLt8Abu1YXLZQKENNt/",
   "signatures": [
     {
       "address": "13hSNQ6KDnFcG8zKJg79HFcKNPcqg4f4hSnxaSjpUsyh7UAvRak",
-      "signature": "I4gDIDPog7K9/yhNUNnk0VJUGiCY6xfFrcQMQ05xcy3ZWC7r1tDMdTGJz46ilDVLeT4SG9vnk9+bX7xQmUF0Bw=="
+      "signature": "G8GRhjp0CWtVAM5RyDv/Ln49ERuDmdA4iUzYVZxNitpgd0x1n76CaU2GU0Mzq+KSuFpchQiEnyhPvvlF6W0hDA=="
     }
   ]
 }
