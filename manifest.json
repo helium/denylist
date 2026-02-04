@@ -1,11 +1,11 @@
 {
-  "serial": 2026012701,
-  "hash": "h9lLGOqGD5kalMQFpQ5dqvYr4tpsEkgvVyeYUVgB3ds=",
-  "report_prefix": "https://helium-mainnet-iot-denylist-report-cards.s3-us-west-2.amazonaws.com/20260127/",
+  "serial": 2026020301,
+  "hash": "Zlhv+8VeVdOfP4/CvgM77LKulPlZImCD14brJba2EGg=",
+  "report_prefix": "https://helium-mainnet-iot-denylist-report-cards.s3-us-west-2.amazonaws.com/20260204/",
   "signatures": [
     {
       "address": "13hSNQ6KDnFcG8zKJg79HFcKNPcqg4f4hSnxaSjpUsyh7UAvRak",
-      "signature": "7mJc3UlDzhs78vTmGjXGZ5JruSKEUrQHvOB71JUGWKOXFH8NzUaA5AOa9tvd/cMbotFLCt1zx4eetkDhMClJBw=="
+      "signature": "Qj+gRlGmeJp9r2pO+WsY5iVvq6vsTwkYsu5K2V+EFQ5NgyxfAVFKxXHcefOqrhjEElb0/FA4e0LdqckmoucbBQ=="
     }
   ]
 }
